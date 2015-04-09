@@ -100,9 +100,9 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
         this.recorder = new MediaRecorder();
 
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            this.tempFile = Environment.getExternalStorageDirectory().getAbsolutePath() + "/tmprecording.mp4";
+            this.tempFile = Environment.getExternalStorageDirectory().getAbsolutePath() + "/tmprecording.m4a";
         } else {
-            this.tempFile = "/data/data/" + handler.cordova.getActivity().getPackageName() + "/cache/tmprecording.mp4";
+            this.tempFile = "/data/data/" + handler.cordova.getActivity().getPackageName() + "/cache/tmprecording.m4a";
         }
 
     }
