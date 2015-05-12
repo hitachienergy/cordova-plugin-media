@@ -525,11 +525,11 @@
                 }
             }
 
-            NSDictionary *recordSettings = [NSDictionary dictionaryWithObjectsAndKeys:
-                                                        [NSNumber numberWithInt: kAudioFormatMPEG4AAC], AVFormatIDKey,
-                                                        [NSNumber numberWithFloat:16000.0], AVSampleRateKey,
-                                                        [NSNumber numberWithInt: 1], AVNumberOfChannelsKey,
-                                                        nil];
+            NSDictionary *recordSettings = @{AVEncoderAudioQualityKey: @(AVAudioQualityMedium),
+                                                                            AVFormatIDKey: @(kAudioFormatMPEG4AAC),
+                                                                            AVEncoderBitRateKey: @(128000),
+                                                                            AVNumberOfChannelsKey: @(1),
+                                                                            AVSampleRateKey: @(44100)};
 
 
             // create a new recorder for each start record
