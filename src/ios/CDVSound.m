@@ -344,10 +344,10 @@
         audioFile.player = [[CDVAudioPlayer alloc] initWithContentsOfURL:resourceURL error:&playerError];
     } else {
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:resourceURL];
-        NSString* userAgent = [self.commandDelegate userAgent];
-        if (userAgent) {
-            [request setValue:userAgent forHTTPHeaderField:@"User-Agent"];
-        }
+        //NSString* userAgent = [self.commandDelegate userAgent];
+        //if (userAgent) {
+        //    [request setValue:userAgent forHTTPHeaderField:@"User-Agent"];
+        //}
 
         NSURLResponse* __autoreleasing response = nil;
         NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&playerError];
